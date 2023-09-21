@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.container,
+.row,
+.col,
+.col-md-6 {
+  border: 1px dashed tomato;
+}
 
 .App-logo {
   height: 40vmin;
