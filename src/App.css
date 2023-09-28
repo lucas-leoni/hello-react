@@ -1,12 +1,6 @@
 .App {
   text-align: center;
 }
-.container,
-.row,
-.col,
-.col-md-6 {
-  border: 1px dashed tomato;
-}
 
 .App-logo {
   height: 40vmin;
@@ -41,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar-nav {
+  /* display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 1.5rem; */
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  margin: 1.5rem;
+  text-decoration: none;
+  color: #61dafb;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.page-title {
+  color: #61dafb;
+}
+
+#root {
+  background-color: #333;
+}
+
+header, main, footer {
+  border: 1px dashed #61dafb;
+}
+
+main h1, footer h1 {
+  color: #61dafb;
 }
