@@ -1,38 +1,47 @@
 import '../App.css';
-import { Link } from 'react-router-dom';
+import Logo from '../logo.svg';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
+            data-bs-target="#navbar"
+            data-bs-theme="dark"
+            aria-controls="navbar"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/" className="nav-link active">
+          <div className="collapse navbar-collapse" id="navbar">
+            <ul className="navbar-nav d-flex align-items-center">
+              <NavLink exact to={'/'} className="nav-link" aria-current="page">
+                <img src={Logo} alt="React Logo" className="logo" />
+              </NavLink>
+              <li className="nav-item fs-5">
+                <NavLink to={'/'} className="nav-link" aria-current="page">
                   Home
-                </Link>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">
+              <li className="nav-item fs-5">
+                <NavLink
+                  to={'/contact'}
+                  className="nav-link"
+                  aria-current="page"
+                >
                   Contact
-                </Link>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">
+              <li className="nav-item fs-5">
+                <NavLink to={'/about'} className="nav-link" aria-current="page">
                   About
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
