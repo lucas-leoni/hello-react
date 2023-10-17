@@ -7,6 +7,9 @@ export default function Navbar() {
     <header>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
+          <NavLink exact to={'/'} className="nav-link" aria-current="page">
+            <img src={Logo} alt="React Logo" className="logo" />
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,9 +24,6 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="navbar-nav d-flex align-items-center">
-              <NavLink exact to={'/'} className="nav-link" aria-current="page">
-                <img src={Logo} alt="React Logo" className="logo" />
-              </NavLink>
               <li className="nav-item fs-5">
                 <NavLink to={'/'} className="nav-link" aria-current="page">
                   Home
